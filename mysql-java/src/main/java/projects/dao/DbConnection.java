@@ -18,12 +18,12 @@ public static Connection getConnection()	{
 
 	try {
 		Connection conn = DriverManager.getConnection(uri);
-		System.out.println("Connection to schema '" + SCHEMA + "' is unsuccessful.");
+		System.out.println("Connection to schema '" + SCHEMA + "' is successful.");
 		return conn;
 		}
 		catch (SQLException e) {
 		System.out.println("Unable to get connection at " + uri);
-		throw new DbException("Unable to get connection at \" + uri");
+		throw new DbException("Unable to get connection at " + uri);
 		}
 	}
 	
